@@ -1,0 +1,653 @@
+console.log() //muestra en consola el valor de una variable o texto encadenado
+
+//Variables
+var //Variable global
+let //Variable normal
+const //Variable constante se usa también en objetos y arrays
+
+//String
+X.toString() //Convierte cualquier objeto en cadena de texto
+X.toString(#) //Convierte un valor numerico en base decimal a un numero en cualquier otra base
+X.toUpperCase() //Todo mayuscula
+X.toLowerCase() //Todo minúscula
+X.includes("texto") //Buscar cualquier palabra en el texto
+X.trim() //Elimina espacios en blanco
+X.lenght //Tamaño del texto
+X.slice(0,#) //Recorta un texto hasta una posición indicada
+X.split("separador") //Genera un arreglo
+X.split("").reverse().join("") //Invierte texto, join une todo lo separado y puesto en reversa
+X.repeat(#) //Repite una cadena texto un número de veces determinado 
+X.indexOf(cadena,posición) //Busca una cadena de texto en una posición indicada, de no encontrarse en esa posición devuelve - 1
+' ${} ' //Simbolo para template, usado para interpolacion y uso de listas
+X.toFixed(#) //Valor de decimales a mostrar
+parseInt(X)  //Devuelve parte entera del valor
+parseInt(X,base) //Convierte un numero deseado a cualquier base (binario,decimal,hexadecimal,etc)
+parseFloat(X) //Devuelve valor flotante
+typeof X //Devuelve el tipo de variable
+()[]{} instanceof tipo //Devuelve valor booleno true or false
+Object.entries(//Objeto) //Desglosa las entradas de algún objeto
+
+//Array
+Array.of(x,y,z) //Accede al objeto Array para crear un arreglo
+Array(#).fill(valor cualquiera) //Genera un array con una cantidad de valores y los llena con un vamos especificado
+X.push(#) //Agrega un elemento al final del array
+X.pop() //Elimina el último elemento de un array
+X[#] //Permite interactuar con el array en esa posición 
+indexOf(#) //Devuelve la posicion en la que se encuentra un valor dentro de un array
+X.slice(indice,#) //Devuelve una copia de la lista eliminando un elemento en cierta posicion
+X=[].concat(//cualquier array) //Hace una copia de un array cualquiera
+X.sort() //Devuelve un array ordenado alfabeticamente
+X.sort((a,b)=>a-b) //Ordena numeros en forma ascendente, se usa un metodo de comparacion
+[...new Set(X)] //Set crea una nueva instancia sin valores repetidos a partir de un arreglo
+X.map(el=>(el*el)//cualquier operacion entre los elementos de la lista) //Permite iterar dentro de un areeglo y generar un arreglo nuevo
+X.filter(el=>(el%2===0)//cualquier condicion para filtrar y generar el arreglo) //Permite filtrar un arreglo bajo una condicion
+X.filter((value,index,self)=>self.indexOf(value) === index) //Filtra y compara si existen valores iguales para eliminarlos
+X.reduce() //Se utiliza para iterar dentro de un arreglo en el cual queremos reducir los valores
+X.includes() //Se utiliza para veriificar si un elemento se encuentra dentro de una lista
+
+
+//Objeto
+X.nueva_propiedad = "#"  //Añade una propiedad dentro del objeto
+${this.propiedad} //Permite interactiva con varias propiedades dentro del objeto
+X.propiedad //Permite revisar el valor de una propiedad
+Object.keys(nombre_objeto) //Nos enumera las propiedades existentes en el objeto
+Object.values(nombre_objeto) //Nos enumera los valores existentes en el objeto
+X.hasOwnProperty("nombre_propiedad") //Verifica si existe una propiedad especifica en el objeto
+
+//Tipos de operadores
+% //Módulo - devuelve el cociente de una division
+
+//Operadores logicos
+|| //Or
+&& //And
+
+//Condicionales
+If(condición){lo que devuelve}else if(){} else{} //estructura condicional if, else if y else
+//Operador ternario 
+(Condición) ? "texto a mostrar en caso de verdadero" : "texto a mostrar en caso de falso" 
+
+//Switch case
+switch(key){
+Case value_key:
+Acción a realizar
+Break
+} //Estructura de switch case, usado para diferentes casos
+
+//Bucles 
+while(condicion){
+Acción a realizar
+X++} //Estructura de while, bucles
+Do{
+Acción a realizar
+X++} while(condición) //Estructura de do while
+for(inicializacion de variable, condición, decremento o aumento) {secuencia qué ejecuta el for} //Estructura de ciclo for
+for (const ítem in/of objeto) {secuencia a ejecutar} //Bucle for in/of
+Array.forEach(function(el,index)){} //Permite iterar dentro de un Array existente
+
+//Manejo de errores
+try{
+Código a evaluar} catch{
+Captura error del try} finally {
+Se ejecuta siempre al final} //Sirve para analizar un error dentro de una codigo
+isNaN //Analiza si un valor es numérico, devuelve falso en caso de no serlo
+throw new Error(Mensaje de error) //Error personalizado
+
+//Destructuracion
+let objeto = [] {} //Sea un array o un objeto se puede destructorar de la siguiente manera
+const[nombre nueva variable]=array
+const[nombre de las mismas variables]=objeto
+
+//Parametros rest y operador spread
+...# //Se usan tres puntos suspensivos para añadir parametros extras que puedan ser necesario (parametro rest)
+...X,...Y //Se usan e igual manera pero para valores ya existentes (parametro spread)
+
+//Arrow function
+Const X = () => {} //Reemplaza la forma de escribir las funciones incluso se puede hacer más directa
+
+//Clases y herencia
+class X{
+constructor(entradas) {
+this.entrada} 
+
+//Metodos
+metodo() {
+//Acción a realizar} } 
+const #=new X (entrada) //Estructura de una clase
+static X() {} //Método estático se puede ejecutar sin necesidad de instanciar la clase
+
+//Objeto console
+.log //Imprimir cualquier mensaje en consola
+.warn //Genera un aviso en consola
+.error //Marca un error en consola
+.info //Muestra información deseada
+.group() 
+
+//Grupos
+.groupEnd() //Genera un grupo para mostrar en consola
+.table() //Genera una tabla de algún objeto que deseemos
+.time() //Cronometra un lapso del código que deseemos calcular su ejecución
+.count() //Cuenta las veces que se ejecuta un código deseado
+.assert(condicion,variables,prueba) //Realiza una prueba unitaria para comprobar el funcionamiento de un codigo
+
+//Objeto date
+Date() //Devuelve la fecha completa
+.getDate //Día del mes
+.getDay //Día de la semana 
+.getMounth //Numero del mes
+.getFullYear //Año entero
+.getHours-Minutes-Seconds //Obtiene la hora, minutos y segundos respectivamente
+.toString! //Fecha igual que Date
+.toDateStrng //Solo fecha 
+.toLocaleString //fecha y hora en números
+.toLocaleDateString //Solo fecha 
+.toLocaleTimeString //Solo hora
+.getTimezoneOffset //Región horaria en minutos
+.getUTC# //Hora del meridiano cero
+Date.now //Segundos qué han pasado desde 1 enero de 1970 
+
+//Objeto math
+Math //Posee todas las propiedades matematicas
+Math.max(...//Cualquier arreglo) //Devuelve valor maximo en un listado
+Math.min(...//Cualquier arreglo) //Devuelve valor minimo en un listado
+
+//Alert, confirm y promp
+alert() //Muestra alerta en pestaña del navegador
+confirm() //Genera pestaña para aceptar o negar una peticion
+prompt() //Permite interactuar con el usuario para que ingresó un valor o string
+
+//Cortocicuitos
+X||Y //Cortocircuito OR si el enunciado o valor de la izquierda es verdadero ejecutará ese de lo contrario el valor de la derecha 
+ X&&Y //Cortocircuito AND si el enunciado o valor de la izquierda ES falso ejecutará ese de lo contrario el valor de la derecha
+
+//Expresiones regulares
+!/(expresiones a buscar)/.test(Variable a analizar) //Se crea una expresion regular para buscar un patron
+new RegExp(/patron a buscar/,"ig") //Busca una secuencia especifica en un texto, i sirve ppara que ignore mayusculas y g busque de forma global
+.test(texto a analizar) //Devuelve valor booleano
+.exec(texto a analizar) //Devuelve el carácter buscado y en que posición se encuentra
+.match(RegExp).length //Devuelve la cantidad de ocurrencia de la cadena buscada
+i //Ignora mayúsculas 
+g //Variable global
+/carácter a buscar/ig //Se usa para buscar un carácter en especifico y es la sintaxis más utilizada en expresiones regulares
+\s //admite espacios en la busqueda
+/^[]+$/ //No admite nada antes ni despues de la busqueda que se va a realizar y el signo + para quese itere en toda la cadena
+
+//Funciones anónimas autoejecutables
+(function (//Variables) {
+Código a ejecutar
+}) (//Variables a asignar)  //Sintaxis de función anónima para que se ejecute directamente
+
+//Temporizadores (setTimeout & setInterval)
+setTimeout(() => {
+//Funcion a ejecutar        
+      }, timeout); //La funcion setTimeout ejecuta un codigo despues de un tiempo de espera que se indica en la parte del timeout
+clearTimeout(X) //Detiene la ejecucion de un setTiemout almacenado previamente en una variable X
+setInterval(() => {
+//Funcion a ejecutar       
+      }, interval); //La funcion detInterval ejecuta un codigo indefinidamente despues de cada lapso de tiempo especificado el parte interval
+clearInterval(X) //Detiene la ejecucion de un setInterval almacenado previamente en una variable X
+
+//Asincronia y el event loop
+/*javascript usa un modelo asincrono y no bloqueante, con un loop de eventos implementado en un solo hilo (single thread) para operaciones de entrada y salida (input/output)*/
+
+//Nuevos tipos de datos
+
+//Symbol
+const X = Symbol() //Se declara directamente sin usar new como en otras variables
+const obj = {[X]:"#"} //Utilizado princiálmente para declarar una propiedad privada dentro de un objeto
+Object.getOwnPropertySymbol(X) //Permite iterar dentro de un objeto para poder enlistar las propiedades privadas del mismo
+
+//Sets
+new Set([]) //Se declara una nueva variable set, este nuevo tipo de dato es un arreglo mejorado en el cual no se permite valores repetidos
+X.size //Al ser del tipo set para saber la longitud del arreglo se debe utilizar size en vez de length
+X.add(#) //Para agregar valores al set
+Array.from() //Convierte en un array cualquier objeto que sea iterable, en este caso el dato set
+X.delete(#) //Elimina cualquier valor dentro del set
+X.has(#) //Verifica si un valor se encuentra dentro del set, devuelve un valor booleano
+X.clear() //Elimina todos los valores del set
+
+//Maps
+new Map()//Se declara una nueva variable map,  este nuevo tipo de dato es un objeto primitivo
+//Se pueden utilizar los mismos comandos que se utilizan en el dato set
+X.set(#,#) //Añade valores al objeto creado
+X.get(#) //Obtiene el valor de una llave
+//Tiene la caracteristica de permitir cualquier valor como llave
+
+//WeakSets y WeakMaps
+new WeakSet() //Se declara una nueva variable con el dato WeakSet
+//No es un dato iterable, no se puede generar valores desde la declaracion y para hacerlo se deben crear objetos para añadirlos con el metodo add, el resto de metodos se pueden utilizar excepto el metodo size
+
+new WeakMap() //Se declara una nueva variable con el dato WeakMap
+//No es un dato iterable, no se puede generar valores desde la declaracion y para hacerlo se deben crear objetos para añadirlos con el metodo set, el resto de metodos se pueden utilizar excepto el metodo size
+
+//Iterables y Iterators
+X.next() //Me devuelve un valor booleano dependiendo si existe un siguiente elemento en el iterable
+
+//Generators
+Function* //El asterisco le indica JS que es un generador
+yield "identificador" //Es un return especial dentro del generador (detiene la ejecucion de la funcion en esa parte)
+
+//Proxies
+new Proxy(//Recibe objeto, //Recibe el manejador) //Al crear un Proxy podemos intermediar un objeto ya creado con una nueva variable
+//Manejador
+const manejador = {
+        set(obj, prop, valor) {},
+      }; //Sintaxis del manejador usando set(), en el cual se ingresa los valores que se desea tomar el objeto original
+
+//This y los metodos call, apply y bind
+
+//This
+//Se usa para hacer referencia a un valor dentro de un grupo o objetos declarados dentro del codigo, en el contexto de ejecución global (fuera de cualquier función), this se refiere al objeto global, ya sea en modo estricto o no. 
+this.X //Su sintaxis es la mostrada y se usa para referirse a un valor dentro den grupo
+this //POr si solo hace referencia al objeto global
+
+//Call, apply, bind
+X.call({},#,#...) //Recibe como parametro el objeto al que queremos hacer referencia para trabajar dentro de ese grupo, X siendo una funcion que queremos ejecutar
+X.apply({},[#,#...]) //Aparte de recibir el parametro objeto, recibe mas parametros
+X.bind(#) //Permite asociar un objeto dentro de otro que se este trabajando
+
+//JSON
+// JSON es un formato que almacena información estructurada y se utiliza principalmente para transferir datos entre un servidor y un cliente.
+JSON.parse("obj") //Convierte cualquier valor a un objeto valido en javascript, siempre y cuando este sea valido
+console.log(JSON.stringify(obj)) // Convierte cualquier valor o objeto a una cadena de texto en javascript, convierte a formato JSONs
+
+//WEB APIs
+//El término API es una abreviatura de Application Programming Interfaces, que en español significa interfaz de programación de aplicaciones. Se trata de un conjunto de definiciones y protocolos que se utiliza para desarrollar e integrar el software de las aplicaciones, permitiendo la comunicación entre dos aplicaciones de software a través de un conjunto de reglas.
+
+//API speechSynthesis
+/*let texto = "Hola soy tu amigo John Molina";
+const hablar = (texto) =>
+speechSynthesis.speak(new SpeechSynthesisUtterance(texto));
+hablar(texto);*/ //Ejemplo que permite generar una voz desde un texto
+
+//DOM Introduccion
+//Es aquel que controla todas las partes de nuestro codigo html
+documento.head //Nos muestra sola la parte del head
+document.body //Nos muestra sola la parte del body
+document.documentElement //Nos muestra el codigo html y su tipo
+document.documentElement.#  //Con el nombre de cualquiera de las partes del codigo podemos acceder a esa en especifico
+document.doctype //Accede al doctype de html
+document.characterSet //Nos devuelve el valor del formato de codificacion
+document.title //Accede al titulo de la pagina
+document.links //Devuelve todos los enlaces existentes dentro de la pagina
+document.images //Muestra las imagenes dentro de la pagina
+document.forms //Muestra formularios existentes
+document.styleSheets //Muestra los estilos de personalizacion
+document.scripts //Muestra los scripts del codigo, incluyendo el generado por el "Open with live server"
+document.getSelection("") //Metodo que permite recuperar el texto seleccionado en la pagina
+document.getElementsByTagName("") //Muestra todas las etiquetas de algun tipo dentro de la pagina
+document.getElementsByClassName("") //Muestra todas las etiquetas pertenecientes a una clase
+document.getElementsByName("") //Muestra cualquier elemento del codigo html que contenga ese nombre en el identificador name
+document.getElementById("") //Muestra el elemento dependiendo el ID asignado
+
+/*
+setTimeout(() => {
+  console.log(document.getSelection().toString());
+}, 3000);
+*/ //Ejemplo de como se podria utilizar el metodo getSelection()
+document.write("#") //Añade valores dentro de la pagina, pero los añade dentro del script
+
+//DOM: Nodos, elementos y slectores
+nav#menu>ul>li*5>a{Seccion $} //Genera un menu de 5 posiciones en codigo html
+document.querySelectorAll("")) //Reemplaza el uso de anteriores metodos para recuperas etiquetas y mas, sin el All solo muestra el primer elemento encontrado, en caso de clases y menus se debe identifcar el tipo, ya sea con "." o "#" adicionalente tiene las mismas caracteristicas que trabajar con un array normalmente
+
+//DOM: Atributos, data atributes
+console.log(document.querySelector(".").#); //Permite ingresar dentro de cualquier elemento y seleccionar un valor en especifico, pero va a devolver el enlace perteneciente a su valor en la pagina web
+console.log(document.querySelector(".").getAttribute("#")); //Permite ingresar dentro de cualquier elemento y seleccionar un valor en especifico y devolvera directamente el valor que solicitamos
+document.documentElement.# = "#" //Permite cambiar el valor del atributo
+document.documentElement.setAttribute("#", "#") //Permite cambiar el valor del atributo
+
+//Data-Attributes
+X=document.querySelector(".") //Guardado de un elemento de html en una variables
+X.setAttribute("#", "#") //Permite añadir valores a dicho elemento
+X.deleteAttribute("#") //Permite eliminar valores a dicho elemento
+X.hasAttribute("#") //Permite verificar si un valor existe dentro del elemento
+X.getAttribute("#") //Permite acceder al valor de un elemento
+X..dataset.# = "#" //Permite cambiar los valores de un elemento
+
+//Estilos y Variables CSS
+X.style //Devuelve el listado de variables que se pueden asignar dentro del estilo
+X.getAttribute("#") //Devuelve el texto en el elemento especificado
+//De igual manera que en el resto de elementos se puede acceder a uno en especifico mediante el punto
+X.style.nombre_elemento //Accede a una parte especifica
+window.getComputedStyle(X) //Accede a las propiedades dinamicas de CSS la cual se nos muestra  de forma que cada propiedad tiene un indice, y aquellas que anteriormente se mostraban sin valor ahora se muestran con su valor por defecto
+getComputedStyle($linkDOM).getPropertyValue("#") //Otra forma de acceder al valor de una propiedad en especifico
+X.style.setProperty("text-decoration", "none") //Elimina subrayado de los enlaces
+X.style.setProperty("display", "block") //Ocupa todo el espacio disponible
+X.style.# = "#" //De igual manera por el metodo de punto se puede asignar valor a una propiedad
+
+//DOM: Clases CSS
+X.className //Muestra especificamente el nombre de la clase
+X.classList //Muestra un DOMTokenList con los elementos pertenecientes a la clase
+X.classList.contains("#") //Devuelve valor booleano si es que existe la clases especificada
+X.classList.add("#") //Añade una y mas clase
+X.classList.remove("#") //Elimina una clase
+X.classList.toggle("#") //Funciona como interruptor, si tiene la clase procede a eliminarla y si no la tiene la añade
+X.classList,replace("#", "#") //Reemplaza una clase por otra
+
+//DOM: Texto y HTML
+X.innerText = "#" //Creada para internet explorer pero funciona para cualquier navegador, reemplaza texto
+X.textContent = "#" //Forma parte del estandar para agregar contenido textual
+X.innerHTML = "#" //Toma en cuenta las etiquetas dentro del texto, cosa que os otros metodos no hacian
+X.outerHTML = "#" //Sustituye el parrafo id por el nuevo texto, tambien toma en cuentaa las etiquetas
+
+//DOM Traversing: Recorriendo el DOM
+X.children //Devuelve una lista con cada uno de los elementos pertenecientes a una clase
+X.childNodes //Devuelve lista con los hijos nodos, incluye los saltos de linea
+X.parentElement //Devuelve la parte del HTML en el que se encuentra la clase
+X.parentNode //Devuelve el nodo HTML en el que se encuentra la clase
+X.firstChild //Muestra el primer hijo, por lo general va a ser el primer salto de lines despues de la clase
+X.firstElementChild //Muestra el primer hijo, es decir el primer elemento perteneciente a la clase
+X.lastElementChild //Muestra el ultimo hijo, es decir el ultimo elemento perteneciente a la clase
+X.previousElementSibling //Muestra el hermano anterior a la clase
+X.nextElementSibling //Muestra el siguiente hermano a la clase
+X.closest("#") //Metodo que busca si existe un ancestro antes de la clase
+
+//DOM: Creando Elementos y Fragmentos
+document.createElement("#") //Crea un elemento dentro de una etiqueta ya establecida
+X.appendChild(#) //Agrega hijos dentro de las clases o elementos necesarios
+//Para utilizar el metodo innerHTML para crear varios elementos se debe inicializar con un valor null o undefined
+document.createDocumentFragment() //Crea un fragmento en el cual se puede ingresar los valores con los cuales vamos a trabajar en el DOM para asi hacer solo una insercion en el mismo
+
+//DOM: Templates HTML
+//El elemento HTML <template> es un mecanismo para mantener el contenido HTML del lado del cliente que no se renderiza cuando se carga una página, pero que posteriormente puede ser instanciado durante el tiempo de ejecución empleando JavaScript
+document.importNode(X, true) //Crea una copia de un nodo desde un documento externo para ser insertado en el documento actual
+
+//DOM: Modificando Elementos (Old Style)
+X.replaceChild(nuevo_elemento, clase.children[2]) //Sirve para cambiar un elemento por otro dentro de una clase
+X.insertBefore(nuevo_elemento, clase.firstElementChild) //Remplaza el elemento deseado en la primera posicion
+X.removeChild(clase.lastElementChild) //Elimina el ultimo elemento de la clase
+X.cloneNode(true) //Clona todo el contenido de un nodo especificado
+
+//DOM: Modificando Elementos (Cool Style)
+
+//Utiliza el metodo insertAdjacent para modificar los elementos deseados, ya sean elementos, codigo HTML o texto especifico
+/*
+.insertAdjacent...
+  X.insertAdjacentElement(position,el)
+  X.insertAdjacentHTML(position,html)
+  X.insertAdjacentText(position,text)
+
+Posiciones:
+  beforebegin(hermano anterior)
+  afterbegin(primer hijo)
+  beforeend(ultimo hijo)
+  afterend(hermano siguiente)
+*/
+X.prepend(#) //Añade un elemento al inicio del nodo
+X.before(#); //Añade un elemento antes del nodo
+X.append(#) //Añade un elemento al final del nodo
+X.after(#) //Añade un elemento al final despues del nodo
+
+//Dom: Manejadores de eventos
+//Los eventos son la manera que tenemos en Javascript de controlar las acciones de los visitantes y definir un comportamiento de la página cuando se produzcan. Cuando un usuario visita una página web e interactúa con ella se producen los eventos y con Javascript podemos definir qué queremos que ocurra cuando se produzcan los eventos.
+//Manejador de evento: es el comportamiento que nosotros podemos asignar como respuesta a un evento. Se especifica mediante una función Javascript, que se asocia a un tipo de evento en concreto. Una vez asociado el manejador a un tipo de evento sobre un elemento de la página, cada vez que ocurre ese tipo de evento sobre ese elemento en concreto, se ejecutará el manejador de evento asociado.
+//Ejemplo de evento-multiple
+X = document.getElementById("#");
+X.addEventListener("click", holaMundo); //Primer evento a ejecutar
+X.addEventListener("click", (e) => {
+  alert("Hola Mundo Manejador de eventos multiple");
+  console.log(e);
+  console.log(e.type);
+  console.log(e.target);
+}); //La e nos especifica el evento que se esta ejecutando
+
+//DOM: Evento con Parametros y Remover Eventos
+X.addEventListener("#",#) //Este metodo nos ayuda a asignar una accion al evento y que se ejecutar al momento que se cumpla la accion
+X.removeEventListener("#", #) //Elima un evento para que no se ejecute indefinidamente
+X.disabled = true //Deshabilita un comando
+
+//DOM: Flujo de Eventos (Burbuja y Captura)
+X.addEventListener("#", #, true); //Funciona al igual que antes pero el tru nos facilita para cuando existe flujo de burbuja y volverlo de captura
+X.addEventListener("#", #, {
+    capture: true, //Habilita flujo de captura
+    once: true, //Solo permite ejecutar una vez el evento
+  }); //Otra forma de utilizar el metodo addEventListener
+
+//DOM: stopPropagation & preventDefault
+X.stopPropagation() //Detiene el flujo de eventos, evita la propagación adicional del evento actual en las fases de captura y bubbling
+X.preventDefault() //Detiene el evento posterior a la accion, cancela el evento si este es cancelable, sin detener el resto del funcionamiento del evento
+
+//DOM: Delegacion de Eventos
+//La delegación de eventos consiste en escuchar los eventos en el elemento padre para capturarlo cuando ocurra en sus hijos, para entenderlo de forma fácil, con la delegación de eventos tenemos un elemento que está continuamente escuchando si se lanza o no un evento y que tendrá que cumplir la condición que le pongamos.
+document.addEventListener("#",(e)=>{#}) //Se utiliza el addEventListener directamente en todo el documento para no tener que utilizar el metodo stopPropagation
+X.matches("#") //Devuelve true si el elemento seleccionado coincide con el que le hemos pasado dentro del método o false si no coincide
+
+//BOM: Propiedades y Eventos
+Con el BOM, es posible redimensionar y mover la ventana del navegador, modificar el texto que se muestra en la barra de estado y realizar muchas otras manipulaciones no relacionadas con el contenido de la página HTML.
+window.innerWidth //Representa el ancho (en pixeles) del viewport
+window.innerHeight //Representa la altura (en pixeles) del viewport
+window.outerWidth //Obtiene el ancho en pixeles de toda la ventana del navegador
+window.outerHeight //Obtiene la altura en pixeles de toda la ventana del navegador
+window.scrollX //Desplazamiento de la barra desplazadora en X
+window.scrollY //Desplazamiento de la barra desplazadora en Y
+window.screenX //Ubicacion del navegador en X
+window.screenY //Ubicacion del navegador en Y
+
+//BOM: Metodos
+window.open("#") //Metodo que permite asignar que se abra en una nueva ventana una pagina deseada
+window.close() //Cierra la ventana actual
+X.close() //Cierra una ventana previmente almacenada en una variable
+window.print() //Abre la opcion de imprimir la pantalla
+
+//BOM: Objetos, URL, Historial y Navegador
+
+//Objeto location
+location //Representa la ubicación (URL) del objeto al que esta vinculado. Los cambios hechos en ella son reflejados en el objeto al cual está relacionado. Ambas interfaces, Document y Window tienen una interface Location asignada
+location.origin //Muestra la ruta de la cual se originna la pagina
+location.protocol //Protocolo en el cual esta basado
+location.host //Dominio
+(location.hostname //Direccion IP o dominio
+location.port //Puerto que esta escuchando el servidor
+location.href //URL completa
+location.hash //Ayua a que la pagina sea mas amigable
+location.pathname //Nombre del archivo que contiene la pagina html
+location.search //GUarda los datos ingresados en la URL
+
+//Objeto history
+history //Almacena el numero de paginas visitadas
+history.back(#) //Regresa una cantidad especifica de paginas con las que se interactuo
+history.forward(# //Avanza en el historial de las paginas
+history.go(#) //Se puede ir a paginas especificas
+
+//Objeto navigator
+navigator //Puede ser utilizado para obtener información sobre la aplicación que está ejecutando el script
+navigator.connection //Contiene información sobre la conexión de red de un dispositivo
+navigator.geolocation //Permite acceder a la ubicación del dispositivo
+navigator.mediaDevices //Puede usar para obtener información sobre los dispositivos de medios disponibles
+navigator.onLine //Devuelve un valor booleano que indica si el navegador está funcionando en línea
+navigator.serviceWorker //Proporciona acceso al registro, eliminación, actualización y comunicación con los objetos
+navigator.storage //Se usa para administrar los permisos de persistencia y estimar el almacenamiento disponible sitio por sitio y aplicación por aplicación
+navigator.userAgent //Devuelve la cadena de agente de usuario para el navegador actual
+
+/**********************************************************************************************************************************************************/
+
+//Ejercicios del DOM
+
+//Menu Hamburguesa configuracion (Boton)
+/*export default function hamburgerMenu(panelBtn, panel, menuLink) {
+  const d = document;
+  d.addEventListener("click", (e) => {
+    if (e.target.matches(panelBtn) || e.target.matches(`${panelBtn} *`)) {
+      d.querySelector(panel).classList.toggle("is-active");
+      d.querySelector(panelBtn).classList.toggle("is-active");
+    }
+    if (e.target.matches(menuLink)) {
+      d.querySelector(panel).classList.remove("is-active");
+      d.querySelector(panelBtn).classList.remove("is-active");
+    }
+  });
+}*/
+
+//Seleccion de teclado e interaccion con la pagina con eventos del addEventListener
+"keydown" //Ejecuta el evento al presionar la tecla
+"keyup" //Ejecuta el evento al soltar la tecla
+"keypress" //Ejecuta el evento al mantener presionada la tecla
+e.type //Tipo de evento
+e.keyCode //Codigo que identifica a la tecla
+e.key //Nombre de la tecla
+e.ctrlKey //Devuelve valor booleano si se presiona o no esa tecla
+e.altKey //Devuelve valor booleano si se presiona o no esa tecla
+e.shiftKey //Devuelve valor booleano si se presiona o no esa tecla
+if (e.key === "#" && e.altKey){Accion que debemos que se realice con el atajjo del teclado}; //Ejemplo de creacion de atajos de teclado
+
+//Manejo de audio presentado en la pagina
+X.play() //Reproduce un audio en el navegador
+X.pause() //Pausa un audio en ejecucion
+X.currentTime = 0 //Regresa al inicio el audio
+
+//Movimientos y colisiones
+e.preventDefault(); //Detiene los eventos por defecto establecidos en el teclado
+X.style.transform = `translate(xpx,ypx)` //Realiza la accion de traslado utilizando el metodo transform
+X.getBoundingClientRect() //Devuelve el tamaño de un elemento y su posición relativa respecto a la ventana de visualización
+X.left //Nos da el valor del limite del objeto en el lado izquierdo
+X.right //Nos da el valor del limite del objeto en el lado derecho
+X.top //Nos da el valor del limite del objeto en la parte de arriba
+X.bottom //Nos da el valor del limite del objeto en la parte de abajo
+
+//Scroll
+document.documentElement.scrollTop //Desplazamiento desde top 0 de la barra de desplazamiento
+w.scrollTo({
+        behavior: "smooth", //desplazamiento con animacion
+        top: 0, //Posicion de la barra vertical
+	left:0 //posicion de la barra horizontal
+      }); //Propiedad que me indica a donde quiero mandar la barra de desplazamiento
+
+//Dark || Light
+//Recomendable usar dataAttributes para no usar codigo duro en js
+"dark-mode" //Es un cambio temporal en la paleta de colores en la que se invierten los colores de los elementos de la interfaz para utilizar unos claros sobre un fondo oscuro.
+
+//APILocaleStorage
+//La propiedad de sólo lectura localStorage te permite acceder al objeto local Storage; los datos persisten almacenados entre de las diferentes sesiones de navegación.
+localeStorage.getItem("") //Devuelve una DOMString que contiene el valor de la clave. Si la clave no existe, devuelve null.
+localeStorage.setItem("","") //Este método setItem() de la interfaz Storage, cuando reciba una clave y un valor, añadirá estos al almacén, o actualizará el valor si la clave ya existe.
+
+//Responsive con JavaScript
+//Las Media queries le permiten aplicar estilos CSS según el tipo general de un dispositivo (como impresión o pantalla) u otras características como la resolución de la pantalla o el ancho del viewport del navegador
+window.matchMedia() //Devuelve un nuevo objeto MediaQueryList que representa los analizados de la media query indicada.
+
+//Deteccion de Dispositivos User Agent
+window.location.href = "#" //Nuevo redireccionamiento a cualquier pagina
+navigator.userAgent //Es una cadena característica que le permite a los servidores y servicios de red identificar la aplicación, sistema operativo, compañía
+
+//Deteccion del estado de la red
+navigator.onLine //Devuelve valor booleano si existe conexion a internet
+window.addEventListener("online",) //Evento que analiza si existe conexion
+window.addEventListener("offline",) //Evento que analiza si no existe conexion
+
+//Deteccion de la WebCam
+stream //Es una transmisión por medio de secuencias. Nos permite leer, difundir o descargar estas secuencias por medio de un flujo continuo donde en canal de comunicación es fluido en el tiempo mientras nosotros lo deseemos o la información que se quiere transmitir ha terminado
+navigator.mediaDevices //Brinda acceso a dispositivos de entrada de medios conectados, como cámaras y micrófonos, así como también pantalla compartida.
+navigator.mediaDevices.getUserMedia({video:true||false,audio:true||false}) //Solicita al usuario permisos para usar un dispositivo de entrada de vídeo y/o uno de audio como una cámara o compartir la pantalla y/o micrófono
+video.srcObject //Manda el objeto a la fuente de la etiqueta video para transmitir, es necesario activarlo luego con el metodo play()
+
+//Deteccion de Geolocalizacion
+navigator.geolocation.getCurrentPosition() //Es usado para obtener la ubicación actual del dispositivo.
+position.coords.latitude //Valor de latitud
+position.coords.longitude //Valor de longitud
+position.coords.accuracy //Valor de presicion a la redonda
+
+//ScrollSpy
+X = new IntersectionObserver(callback(), {root:"#",rootMargin:"#",threshold:#}) //La API Observador de Intersección provee una vía asíncrona para observar cambios en la intersección de un elemento con un elemento ancestro o con el viewport del documento de nivel superior
+X.observe(//elemento a observar) //Usado para observar de forma asíncrona cambios sobre un objeto. Este método transmite información sobre cambios en el objeto, en el orden en que estos ocurren
+
+//Narrador
+X = new SpeechSynthesisUtterance() //Es una API que nos permite acceder a los lectores de voz que nuestro computador reconoce
+window.speechSynthesis.getVoices() //Devuelve una lista de objetos SpeechSynthesisVoice que representan todas las voces disponibles en el dispositivo actual
+
+/**********************************************************************************************************************************************************/
+
+//AJAX: Introduccion
+//AJAX (Asynchronous JavaScript and XML) se refiere a un grupo de tecnologías que se utilizan para desarrollar aplicaciones web
+
+//AJAX: Objeto XMLHttpRequest
+xhr = new XMLHttpRequest() //Sirve para enviar solicitudes HTTP con el objetivo de intercambiar datos entre el sitio web y el servidor
+document.createDocumentFragment() //Son Nodos del DOM que nunca forman parte del arbol DOM. El caso de uso mas comun es cruar un fragmento de documento, agrregar elementos al fragmento de documento y luego agrregar dicho fragmento de documento al arbol del DOM
+
+//API Fetch
+fetch(//direccion de la que va arecibir los datos) //Proporciona una interfaz JavaScript para acceder y manipular partes del canal HTTP, tales como peticiones y respuestas. Proporciona una forma fácil y lógica de obtener recursos de forma asíncrona por la red
+
+//API Fetch + Async-Await
+throw //Lanza una excepcion definida por el usuario
+await //Es usado para esperar a una Promise. Sólo puede ser usado dentro de una función async function
+
+//Librería Axios
+axios.get() //Es una función que actúa como una propiedad del objeto axios JavaScript que estamos importando y nos sirve para hacer una petición al contenido de un enlace
+<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script> //Se añade un script para poder trabajarc on Axios
+
+//API REST
+//Una API de REST, o API de RESTful, es una interfaz de programación de aplicaciones (API o API web) que se ajusta a los límites de la arquitectura REST y permite la interacción con los servicios web de RESTful
+
+/**********************************************************************************************************************************************************/
+
+//Node.js
+//Ideado como un entorno de ejecución de JavaScript orientado a eventos asíncronos, Node.js está diseñado para crear aplicaciones network escalables
+nvm list //Muestra las versiones de node.js en el cmd
+nvm use #_de_version //Cambia la version que se quiere usar de node.js
+
+/**********************************************************************************************************************************************************/
+
+//JSON Server - API falsa local
+json-server --watch assets/db.json //Ejecuta el servidor falso
+json-server -w -p #puerto assets/db.json //Cambia el puerto por el que se inicializa el servidor
+
+//API REST: Consumo de datos con cliente REST
+Uso de Insommnia para hacer peticiones (GET, POST, PUT y DELETE) a nuestro servidor falso
+GET //Lee la informacion de la direccion ingresada
+POST //Crea un nuevo objeto en la direccion
+PUT //Cambia valores de un objeto
+DELETE //Elimina un objeto especificado
+
+//API REST: CRUD con AJAX
+X = new XMLHttpRequest() //Proporciona una forma fácil de obtener información de una URL sin tener que recargar la página completa
+X.setRequestHeader() //Establece el valor de un encabezado de solicitud HTTP. Cuando usas setRequestHeader(), debes llamarlo después de llamar open(), pero antes de llamar send()
+X.dataset.#nombre //Propiedad de solo lectura de la HTMLElement la interfaz proporciona acceso de lectura / escritura a atributos de datos personalizados (data-*) en elementos
+location.reload() //Carga de nuevo la URL actual, como lo hace el boton de Refresh de los navegadores
+
+/**********************************************************************************************************************************************************/
+
+//Ejercicios AJAX
+
+//Incluir archivos HTML
+X.outerHTML //Obtiene el fragmento HTML serializado que describe el elemento incluyendo sus descendientes. Puede ser asignado para reemplazar el elemento por los nodos resultantes de examinar de la cadena proporcionada
+
+//Uploader con barra de progreso
+Array.from() //Permite a un objeto funcionar como un array y hace poder iterar sobre el
+new FormData() //Le permiten compilar un conjunto de pares clave/valor para enviar mediante XMLHttpRequest
+const fileReader = new FileReader() //Permite que las aplicaciones web lean ficheros (o información en buffer) almacenados en el cliente de forma asíncrona, usando los objetos File o Blob dependiendo de los datos que se pretenden leer
+fileReader.readAsDataURL() //Es usado para leer el contenido del especificado Blob o File
+
+//Uploader con Drag & Drop
+//Eventos especificos al momento de interactuar uno o mas archivos con el navegador
+//Ejercicio resuelto en el archivo "uploader-drag-and-drop.html"
+
+//Envío Formulario y CORS con Fetch y PHP
+//Revisar desde el minuto 30:46 video 128 curso javascript
+
+//Blog con Markdown y Showdown.js
+//Markdown: Es un lenguaje de marcado que facilita la aplicación de formato a un texto empleando una serie de caracteres de una forma especial. En principio, fue pensado para elaborar textos cuyo destino iba a ser la web con más rapidez y sencillez que si estuviésemos empleando directamente HTML
+new showdown.Converter().makeHtml(X) //Convierto nuestro texto en formato markdown a formato html
+//Revisar documentacion acerca de como escribir markdown en (https://joedicastro.com/pages/markdown.html)
+
+//WordPress: Es un sistema de gestión de contenidos web (CMS o content management system), que en pocas palabras es un sistema para publicar contenido en la web de forma sencilla
+
+/**********************************************************************************************************************************************************/
+
+//SPA: Introducción a las Single Page Applications
+//Es un tipo de aplicación web que ejecuta todo su contenido en una sola página. Funciona cargando el contenido HTML, CSS y JavaScript por completo al abrir la web. Al ir pasando de una sección a otra, solo necesita cargar el contenido nuevo de forma dinámica si este lo requiere, pero no hace falta cargar la página por completo. Esto mejora los tiempos de respuesta y agiliza mucho la navegación, favoreciendo así a la experiencia de usuario
+
+//Reactividad: Introducción
+//La reactividad de los datos, simplemente es que la interfaz de usuario de un sitio o aplicación se modifica a los cambios en los datos de la misma. Cada vez que se actualizan los datos, la interfaz de usuario lo hace automáticamente para que coincida con la lógica de programación de la aplicación
+//El estado son los datos de tu aplicación. Porque tiene una duración determinada, el estado son datos en un momento particular de la aplicación
+
+//Reactividad: Manipulación NO Reactiva del DOM
+X.focus() //Este método establece el foco en el elemento especificado, si se puede enfocar. El elemento enfocado es el elemento que recibirá eventos de teclado y similares por defecto
+
+
+
+
+
+
+
+
+
+
